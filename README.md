@@ -1,4 +1,4 @@
-# Microbit-Gra
+# microbit-gra
 
 Gra zręcznościowa na płytkę micro:bit z przesyłaniem wyników drogą radiową i tabelą wyników na żywo w internecie.
 
@@ -16,7 +16,7 @@ Gra zręcznościowa na płytkę micro:bit z przesyłaniem wyników drogą radiow
    Serwer na platformie Render odbiera wynik i zapisuje go w bazie danych PostgreSQL. Udostępnia też listę 10 najlepszych wyników.
 
 4. **Strona WWW (ranking na żywo)**  
-   Strona internetowa (HTML, TailwindCSS, JavaScript) pobiera wyniki z serwera i na bieżąco pokazuje tabelę najlepszych graczy pod adresem.
+   Strona internetowa (HTML, TailwindCSS, JavaScript) pobiera wyniki z serwera i na bieżąco pokazuje tabelę najlepszych graczy.
 
 ---
 
@@ -36,11 +36,11 @@ Baza przyjmuje nowe wpisy z serwera, sortuje je od najwyższego wyniku i zwraca 
 
 ## Szczegóły techniczne
 
-- **Komunikacja radiowa:** wysyłanie sformatowanego ciągu znaków przez wbudowany moduł Radio w micro:bicie:  
-  `"id:<wartość>;wynik:<wartość>;adres API:<wartość>"`
-- **Komunikacja z serwerem (HTTP `POST`, typ danych JSON):**
-  - `POST /api/scores` – przyjmuje ciało żądania w formacie:  
-    `{ "id": "<wartość>", "wynik": "<wartość>" }`
+- **Komunikacja radiowa:** wysyłanie sformatowanego ciągu znaków przez wbudowany moduł Radio w micro:bicie[cite: 7]:  
+  `"id:<wartość>;wynik:<wartość>;adres API:<wartość>"`[cite: 7]
+- **Komunikacja z serwerem (HTTP `POST`, typ danych JSON):**[cite: 7]
+  - `POST /api/scores` – przyjmuje ciało żądania w formacie[cite: 7]:  
+    `{ "id": "<wartość>", "wynik": "<wartość>" }`[cite: 7]
   - `GET /api/leaderboard` – pobiera listę 10 najlepszych graczy.
 - **Użyte technologie:** micro:bit (MicroPython, Radio), Python (FastAPI, pyserial, requests), PostgreSQL, Render, HTML, TailwindCSS, JavaScript, GitHub.
 
