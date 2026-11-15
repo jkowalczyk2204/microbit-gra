@@ -2,7 +2,7 @@
 
 Gra zręcznościowa na płytkę micro:bit z przesyłaniem wyników drogą radiową i tabelą wyników na żywo w internecie.
 
-`Micro:bit (gra) → Radio → Micro:bit (brama) → USB → Komputer (Python) → REST API (FastAPI) → Baza danych (PostgreSQL) → Strona WWW`
+`Micro:bit (gra) → Radio → Micro:bit (brama) → USB → Komputer (Python) → API → Baza danych (PostgreSQL) → Strona WWW`
 
 ## Działanie:
 
@@ -12,7 +12,7 @@ Gra zręcznościowa na płytkę micro:bit z przesyłaniem wyników drogą radiow
 2. **Micro:bit (brama) + Komputer**  
    Drugi micro:bit (brama prowadzącego podłączona przez USB do komputera) odbiera wynik z radia i przekazuje go do programu w Pythonie, który wysyła dane przez internet do serwera w chmurze.
 
-3. **Backend i Baza danych (FastAPI + PostgreSQL)**  
+3. **Backend i Baza danych (API + PostgreSQL)**  
    Serwer na platformie Render odbiera wynik i zapisuje go w bazie danych PostgreSQL. Udostępnia też listę 10 najlepszych wyników.
 
 4. **Strona WWW (ranking na żywo)**  
@@ -42,7 +42,7 @@ Baza przyjmuje nowe wpisy z serwera, sortuje je od najwyższego wyniku i zwraca 
   - `POST /api/scores` – przyjmuje ciało żądania w formacie:  
     `{ "id": "<wartość>", "wynik": "<wartość>" }`
   - `GET /api/leaderboard` – pobiera listę 10 najlepszych graczy.
-- **Użyte technologie:** micro:bit (MicroPython, Radio), Python (FastAPI, pyserial, requests), PostgreSQL, Render, HTML, TailwindCSS, JavaScript, GitHub.
+- **Użyte technologie:** micro:bit (MicroPython, Radio), Python, PostgreSQL, Render, HTML, TailwindCSS, JavaScript, GitHub.
 
 ---
 
