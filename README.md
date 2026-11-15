@@ -36,11 +36,11 @@ Baza przyjmuje nowe wpisy z serwera, sortuje je od najwyższego wyniku i zwraca 
 
 ## Szczegóły techniczne
 
-- **Komunikacja radiowa:** wysyłanie sformatowanego ciągu znaków przez wbudowany moduł Radio w micro:bicie[cite: 7]:  
-  `"id:<wartość>;wynik:<wartość>;adres API:<wartość>"`[cite: 7]
-- **Komunikacja z serwerem (HTTP `POST`, typ danych JSON):**[cite: 7]
-  - `POST /api/scores` – przyjmuje ciało żądania w formacie[cite: 7]:  
-    `{ "id": "<wartość>", "wynik": "<wartość>" }`[cite: 7]
+- **Komunikacja radiowa:** wysyłanie sformatowanego ciągu znaków przez wbudowany moduł Radio w micro:bicie:  
+  `"id:<wartość>;wynik:<wartość>;adres API:<wartość>"`
+- **Komunikacja z serwerem (HTTP `POST`, typ danych JSON):**
+  - `POST /api/scores` – przyjmuje ciało żądania w formacie:  
+    `{ "id": "<wartość>", "wynik": "<wartość>" }`
   - `GET /api/leaderboard` – pobiera listę 10 najlepszych graczy.
 - **Użyte technologie:** micro:bit (MicroPython, Radio), Python (FastAPI, pyserial, requests), PostgreSQL, Render, HTML, TailwindCSS, JavaScript, GitHub.
 
