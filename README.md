@@ -1,4 +1,4 @@
-# Microbit-Ranking
+# Microbit-Gra
 
 Gra zręcznościowa na płytkę micro:bit z przesyłaniem wyników drogą radiową i tabelą wyników na żywo w internecie.
 
@@ -16,7 +16,7 @@ Gra zręcznościowa na płytkę micro:bit z przesyłaniem wyników drogą radiow
    Serwer na platformie Render odbiera wynik i zapisuje go w bazie danych PostgreSQL. Udostępnia też listę 10 najlepszych wyników.
 
 4. **Strona WWW (ranking na żywo)**  
-   Strona internetowa (HTML, TailwindCSS, JavaScript) pobiera wyniki z serwera i na bieżąco pokazuje tabelę najlepszych graczy pod adresem: `https://microbit-ranking.onrender.com`
+   Strona internetowa (HTML, TailwindCSS, JavaScript) pobiera wyniki z serwera i na bieżąco pokazuje tabelę najlepszych graczy pod adresem.
 
 ---
 
